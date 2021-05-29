@@ -1,8 +1,10 @@
 <template>
-  <div class="item">
-    <img :src="img" />
-    <p>Name: {{ name }}</p>
-    <p>Price: {{ price }}</p>
+  <div class="container-1">
+    <div class="box">
+      <img :src="img" />
+      <div>{{ name }}</div>
+      <div>${{ price }}</div>
+    </div>
   </div>
 </template>
 
@@ -14,7 +16,15 @@ export default {
 </script>
 
 <style>
-.item {
-  flex: none;
+.container-1 {
+  display: flex;
+  width: 40%;
+  grid-template-columns: repeat(4, 50px 1fr) 100px;
+  justify-content: flex-start;
+  padding: 10px;
+}
+.container-1 img {
+  width: 200px;
+  height: 200px;
 }
 </style>

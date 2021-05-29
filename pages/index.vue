@@ -6,6 +6,7 @@
       :name="product.name"
       :img="product.image"
       :price="product.price"
+      :id="product.id"
     />
   </div>
 </template>

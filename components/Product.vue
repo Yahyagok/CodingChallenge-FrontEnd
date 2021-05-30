@@ -16,15 +16,21 @@ export default {
 </script>
 
 <style>
-.container-1 {
+/* .container-1 {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 40%;
-  grid-template-columns: repeat(4, 50px 1fr) 100px;
-  justify-content: flex-start;
   padding: 10px;
+} */
+* {
+  margin: 0;
+  padding: 0;
 }
 .container-1 img {
-  width: 200px;
-  height: 200px;
+  gap: 0;
+  flex: 250px;
+  width: 150px;
+  height: 100px;
 }
 </style>

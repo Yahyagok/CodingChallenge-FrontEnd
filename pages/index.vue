@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h5>Products</h5>
     <Product
       v-for="product in products"
       :key="product.id"
@@ -15,9 +16,10 @@
 import axios from 'axios'
 import Product from '../components/Product'
 
+
 export default {
   components: {
-    Product,
+    Product
   },
   data() {
     return {
@@ -47,18 +49,28 @@ export default {
 <style>
 /* Sample `apply` at-rules with Tailwind CSS */
 /* .container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
+  @apply min-h-screen flex justify-center items-center text-center mx-auto;
 } */
-
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
+.container {
+  /* margin: 0 auto; */
+  margin-right: 1em;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  display: flex;
+  flex-flow: row wrap;
+  /* min-height: 100vh; */
+  justify-content: center;
+  /* align-items: center; */
+  /* text-align: center; */
+  /* width: 40%; */
+  grid-template-columns: repeat(4, 12fr);
+}
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

@@ -4,7 +4,6 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    useTabs: false
   },
   parserOptions: {
     parser: 'babel-eslint',
@@ -18,6 +17,6 @@ module.exports = {
   plugins: [],
  
   // add your custom rules here
-   rules: { "prettier/prettier": [ "error", { "endOfLine":"auto", "printWidth": 80, "trailingComma": "es5", "semi": false, "doubleQuote":true, "jsxSingleQuote": true, "singleQuote": false, "useTabs": false, "tabWidth":4 } ] }
+   rules: { }
 
 }

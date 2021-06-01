@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Page1 v-on:clickPage1="clickPage1" />
     <h5>Products</h5>
     <Product
       v-for="product in products"
@@ -9,17 +10,19 @@
       :price="product.price"
       :id="product.id"
     />
+    <Pages />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import Product from '../components/Product'
-
+import Page1 from '../components/Page1'
 
 export default {
   components: {
-    Product
+    Product,
+    Page1,
   },
   data() {
     return {
@@ -42,6 +45,25 @@ export default {
     } catch (err) {
       console.log(err)
     }
+  },
+  methods: {
+    async clickPage1(pageNum) {
+      const config = {
+        headers: {
+          Accept: 'application/json',
+        },
+      }
+      try {
+        const res = await axios.get(
+          `https://trayvonnorthern.com/Edgewood-API/public/api/products?page=${pageNum}`,
+          config
+        )
+        console.log(res)
+        this.products = res.data.data
+      } catch (err) {
+        console.log(err)
+      }
+    },
   },
 }
 </script>

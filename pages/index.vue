@@ -1,14 +1,16 @@
 <template>
   <div class="container">
-    <Page1 v-on:clickPage1="clickPage1" />
+    <Page1 v-on:handleClick="handleClick" />
+    <Page2 v-on:handleClickTwo="handleClickTwo" />
+    <Page3 v-on:handleClickThree="handleClickThree" />
     <h5>Products</h5>
     <Product
       v-for="product in products"
       :key="product.id"
       :name="product.name"
       :img="product.image"
-      :price="product.price"
       :id="product.id"
+      :price="product.price"
     />
     <Pages />
   </div>
@@ -18,11 +20,15 @@
 import axios from 'axios'
 import Product from '../components/Product'
 import Page1 from '../components/Page1'
+import Page2 from '../components/Page2'
+import Page3 from '../components/Page3'
 
 export default {
   components: {
     Product,
     Page1,
+    Page2,
+    Page3,
   },
   data() {
     return {
@@ -47,7 +53,7 @@ export default {
     }
   },
   methods: {
-    async clickPage1(pageNum) {
+    async handleClick() {
       const config = {
         headers: {
           Accept: 'application/json',
@@ -55,10 +61,44 @@ export default {
       }
       try {
         const res = await axios.get(
-          `https://trayvonnorthern.com/Edgewood-API/public/api/products?page=${pageNum}`,
+          `https://trayvonnorthern.com/Edgewood-API/public/api/products?page=1`,
           config
         )
-        console.log(res)
+        console.log(res.data)
+        this.products = res.data.data
+      } catch (err) {
+        console.log(err)
+      }
+    },
+    async handleClickTwo() {
+      const config = {
+        headers: {
+          Accept: 'application/json',
+        },
+      }
+      try {
+        const res = await axios.get(
+          `https://trayvonnorthern.com/Edgewood-API/public/api/products?page=2`,
+          config
+        )
+        console.log(res.data)
+        this.products = res.data.data
+      } catch (err) {
+        console.log(err)
+      }
+    },
+    async handleClickThree() {
+      const config = {
+        headers: {
+          Accept: 'application/json',
+        },
+      }
+      try {
+        const res = await axios.get(
+          `https://trayvonnorthern.com/Edgewood-API/public/api/products?page=3`,
+          config
+        )
+        console.log(res.data)
         this.products = res.data.data
       } catch (err) {
         console.log(err)

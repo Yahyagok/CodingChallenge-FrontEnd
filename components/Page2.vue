@@ -1,14 +1,14 @@
 <template>
-  <h2 class="number" @click="handleClick">1</h2>
+  <h2 class="number" @click="handleClickTwo">2</h2>
 </template>
 
 <script>
 export default {
-  name: 'Page1',
+  name: 'Page2',
 
   methods: {
-    handleClick() {
-      this.$emit('handleClick')
+    handleClickTwo() {
+      this.$emit('handleClickTwo')
     },
   },
 }

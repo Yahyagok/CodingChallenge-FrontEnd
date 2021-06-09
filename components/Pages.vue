@@ -1,21 +1,127 @@
 <template>
-  <div>
-    <!-- <nuxt-link :to="'/' + id"></nuxt-link> -->
-    <div id="content">
-      <div id="pageFooter">Page</div>
-      <h1>2</h1>
-      <h1>>></h1>
+  <div
+    class="
+      bg-white
+      px-4
+      py-3
+      flex
+      items-center
+      justify-between
+      sm:px-6
+      inline-flex
+      z-10
+      bg-white
+      duration-150
+      bg-white
+    "
+  >
+    <div>
+      <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
+      <a
+        href="#"
+        aria-current="page"
+        class="
+          bg-white
+          border-gray-300
+          text-gray-500
+          hover:bg-gray-50
+          relative
+          inline-flex
+          items-center
+          px-4
+          py-2
+          border
+          text-sm
+          font-medium
+          hover:border-red-500
+          focus:border-red-500
+        "
+        @click="handleClick"
+      >
+        1
+      </a>
+      <a
+        href="#"
+        class="
+          bg-white
+          border-gray-300
+          text-gray-500
+          hover:bg-gray-50
+          relative
+          inline-flex
+          items-center
+          px-4
+          py-2
+          border
+          text-sm
+          font-medium
+          hover:border-red-500
+          focus:border-red-500
+        "
+        @click="handleClickTwo"
+      >
+        2
+      </a>
+      <a
+        href="#"
+        class="
+          bg-white
+          border-gray-300
+          text-gray-500
+          hover:bg-gray-50
+          hidden
+          md:inline-flex
+          relative
+          items-center
+          px-4
+          py-2
+          border
+          text-sm
+          font-medium
+          hover:border-red-500
+          focus:border-red-500
+        "
+        @click="handleClickThree"
+      >
+        3
+      </a>
+      <a
+        href="#"
+        class="
+          relative
+          inline-flex
+          items-center
+          px-2
+          py-2
+          rounded-r-md
+          border border-gray-300
+          bg-white
+          text-sm
+          font-medium
+          text-gray-500
+          hover:bg-gray-50
+        "
+      >
+        <span class="sr">>></span>
+      </a>
     </div>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: 'Pages',
+  methods: {
+    handleClick() {
+      this.$emit('handleClick')
+    },
+    handleClickTwo() {
+      this.$emit('handleClickTwo')
+    },
 
-<style scoped>
-#content {
-  display: table;
+    handleClickThree() {
+      this.$emit('handleClickThree')
+    },
+  },
 }
-#pageFooter {
-  display: table-footer-group;
-}
-</style>
+</script>

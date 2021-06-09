@@ -1,8 +1,10 @@
 <template>
   <div class="container">
-    <Page1 v-on:handleClick="handleClick" />
-    <Page2 v-on:handleClickTwo="handleClickTwo" />
-    <Page3 v-on:handleClickThree="handleClickThree" />
+    <Pages
+      @handleClick="handleClick"
+      @handleClickTwo="handleClickTwo"
+      @handleClickThree="handleClickThree"
+    />
     <h5>Products</h5>
     <Product
       v-for="product in products"
@@ -12,23 +14,18 @@
       :id="product.id"
       :price="product.price"
     />
-    <Pages />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import Product from '../components/Product'
-import Page1 from '../components/Page1'
-import Page2 from '../components/Page2'
-import Page3 from '../components/Page3'
+import Pages from '../components/Pages'
 
 export default {
   components: {
     Product,
-    Page1,
-    Page2,
-    Page3,
+    Pages,
   },
   data() {
     return {

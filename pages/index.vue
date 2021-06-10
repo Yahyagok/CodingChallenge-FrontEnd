@@ -110,27 +110,27 @@ export default {
 /* .container {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 } */
-* {
+/* * {
   margin: 0;
   padding: 0;
-}
+} */
 
 .container {
   /* margin: 0 auto; */
-  margin-right: 1em;
+  /* margin-right: 1em;
   margin: 0;
   padding: 0;
   gap: 0;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row wrap; */
   /* min-height: 100vh; */
-  justify-content: center;
+  /* justify-content: center; */
   /* align-items: center; */
   /* text-align: center; */
   /* width: 40%; */
-  grid-template-columns: repeat(4, 12fr);
+  /* grid-template-columns: repeat(4, 12fr); */
 }
-.title {
+/* .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
@@ -150,5 +150,5 @@ export default {
 
 .links {
   padding-top: 15px;
-}
+} */
 </style>

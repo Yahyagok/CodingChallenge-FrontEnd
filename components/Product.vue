@@ -1,9 +1,9 @@
 <template>
-  <div class="container-1">
-    <div class="box">
+  <div class="flex min-h-screen grid grid-cols-4">
+    <div class="gap-0">
       <img :src="img" />
-      <div>{{ name }}</div>
-      <div>${{ price }}</div>
+      <div class="p-0 h-3 w-4">{{ name }}</div>
+      <div class="p-0 h-3 w-4">{{ price }}</div>
     </div>
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
   width: 40%;
   padding: 10px;
 } */
-* {
+/* * {
   margin: 0;
   padding: 0;
 }
@@ -32,5 +32,5 @@ export default {
   flex: 250px;
   width: 150px;
   height: 100px;
-}
+} */
 </style>

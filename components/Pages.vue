@@ -1,20 +1,5 @@
 <template>
-  <div
-    class="
-      bg-white
-      px-4
-      py-3
-      flex
-      items-center
-      justify-between
-      sm:px-6
-      inline-flex
-      z-10
-      bg-white
-      duration-150
-      bg-white
-    "
-  >
+  <div class="bg-white absolute inset-y-100 bottom-10 sm:px-6 z-10 bg-white">
     <div>
       <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
       <a
@@ -26,7 +11,6 @@
           text-gray-500
           hover:bg-gray-50
           relative
-          inline-flex
           items-center
           px-4
           py-2
@@ -35,6 +19,7 @@
           font-medium
           hover:border-red-500
           focus:border-red-500
+          focus:text-red-500
         "
         @click="handleClick"
       >
@@ -48,7 +33,6 @@
           text-gray-500
           hover:bg-gray-50
           relative
-          inline-flex
           items-center
           px-4
           py-2
@@ -57,6 +41,7 @@
           font-medium
           hover:border-red-500
           focus:border-red-500
+          focus:text-red-500
         "
         @click="handleClickTwo"
       >
@@ -69,8 +54,6 @@
           border-gray-300
           text-gray-500
           hover:bg-gray-50
-          hidden
-          md:inline-flex
           relative
           items-center
           px-4
@@ -80,6 +63,7 @@
           font-medium
           hover:border-red-500
           focus:border-red-500
+          focus:text-red-500
         "
         @click="handleClickThree"
       >
@@ -89,7 +73,6 @@
         href="#"
         class="
           relative
-          inline-flex
           items-center
           px-2
           py-2
@@ -99,7 +82,9 @@
           text-sm
           font-medium
           text-gray-500
-          hover:bg-gray-50
+          hover:border-red-500
+          focus:border-red-500
+          focus:text-red-500
         "
       >
         <span class="sr">>></span>

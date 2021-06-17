@@ -1,7 +1,6 @@
 <template>
-  <div class="bg-white absolute inset-y-100 bottom-10 sm:px-6 z-10 bg-white">
+  <div class="bg-white absolute inset-y-100 bottom-8 sm:px-6 z-10 bg-white">
     <div>
-      <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
       <a
         href="#"
         aria-current="page"

@@ -1,9 +1,9 @@
 <template>
-  <div class="flex min-h-screen grid grid-cols-4">
-    <div class="gap-0">
-      <img :src="img" />
-      <div class="p-0 h-3 w-4">{{ name }}</div>
-      <div class="p-0 h-3 w-4">{{ price }}</div>
+  <div>
+    <div>
+      <img :src="img" class="w-80 h-80 d-80" />
+      <div class="object-bottom">{{ name }}</div>
+      <div class="object-bottom">${{ price }}.00</div>
     </div>
   </div>
 </template>

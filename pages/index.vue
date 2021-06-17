@@ -1,19 +1,19 @@
 <template>
-  <div class="container">
+  <div class="md:grid grid-cols-4">
     <Pages
       @handleClick="handleClick"
       @handleClickTwo="handleClickTwo"
       @handleClickThree="handleClickThree"
     />
-    <h5>Products</h5>
     <Product
       v-for="product in products"
+      :id="product.id"
       :key="product.id"
       :name="product.name"
       :img="product.image"
-      :id="product.id"
       :price="product.price"
     />
+    <h1 class="align-top">Products</h1>
   </div>
 </template>
 

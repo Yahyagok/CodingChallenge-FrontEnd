@@ -1,5 +1,16 @@
 <template>
-  <div class="bg-white absolute inset-y-100 bottom-8 sm:px-6 z-10 bg-white">
+  <div
+    class="
+      bg-white
+      absolute
+      inset-y-100
+      bottom-9
+      right-16
+      sm:px-0
+      z-10
+      bg-white
+    "
+  >
     <div>
       <a
         href="#"

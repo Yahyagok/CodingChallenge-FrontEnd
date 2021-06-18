@@ -1,20 +1,22 @@
 <template>
   <div>
-    <h5 class="text-center text-red-500 md:text-lg">Products</h5>
-    <div class="absolute md:grid grid-cols-4 left-12 top-12">
-      <Pages
-        @handleClick="handleClick"
-        @handleClickTwo="handleClickTwo"
-        @handleClickThree="handleClickThree"
-      />
-      <Product
-        v-for="product in products"
-        :id="product.id"
-        :key="product.id"
-        :name="product.name"
-        :img="product.image"
-        :price="product.price"
-      />
+    <div>
+      <h5 class="text-center text-red-500 md:text-lg">Products</h5>
+      <div class="absolute md:grid grid-cols-4 left-12 top-12">
+        <Pages
+          @handleClick="handleClick"
+          @handleClickTwo="handleClickTwo"
+          @handleClickThree="handleClickThree"
+        />
+        <Product
+          v-for="product in products"
+          :id="product.id"
+          :key="product.id"
+          :name="product.name"
+          :img="product.image"
+          :price="product.price"
+        />
+      </div>
     </div>
   </div>
 </template>

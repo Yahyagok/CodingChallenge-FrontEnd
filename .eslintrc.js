@@ -1,5 +1,4 @@
 module.exports = {
-  
   root: true,
   env: {
     browser: true,
@@ -7,7 +6,6 @@ module.exports = {
   },
   parserOptions: {
     parser: 'babel-eslint',
- 
   },
   extends: [
     '@nuxtjs',
@@ -15,8 +13,7 @@ module.exports = {
     'plugin:nuxt/recommended',
   ],
   plugins: [],
- 
-  // add your custom rules here
-   rules: { }
 
+  // add your custom rules here
+  rules: {},
 }

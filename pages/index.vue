@@ -2,7 +2,8 @@
   <div>
     <div>
       <h5 class="text-center text-red-500 md:text-lg">Products</h5>
-      <div class="absolute md:grid grid-cols-4 left-12 top-12">
+      <FilterProducts @filterProduct="filterProduct" />
+      <div class="absolute md:grid grid-cols-4 left-12 top-12 m-6 p-6">
         <Pages
           @handleClick="handleClick"
           @handleClickTwo="handleClickTwo"
@@ -25,11 +26,13 @@
 import axios from 'axios'
 import Product from '../components/Product'
 import Pages from '../components/Pages'
+import FilterProducts from '../components/FilterProducts'
 
 export default {
   components: {
     Product,
     Pages,
+    FilterProducts,
   },
   data() {
     return {
@@ -104,6 +107,12 @@ export default {
       } catch (err) {
         console.log(err)
       }
+    },
+    filterProduct() {
+      console.log(this.products)
+      this.products.filter((product) => {
+        return product.name.match(this.search)
+      })
     },
   },
 }

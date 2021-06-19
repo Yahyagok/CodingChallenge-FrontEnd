@@ -1,9 +1,13 @@
 <template>
   <div>
-    <div>
+    <div class="p-2">
       <img :src="img" class="w-80 h-80 d-80" />
-      <div class="object-bottom">{{ name }}</div>
-      <div class="object-bottom">${{ price }}.00</div>
+      <div class="object-bottom bg-black text-white text-center">
+        {{ name }}
+      </div>
+      <div class="object-bottom bg-black text-white text-center">
+        ${{ price }}.00
+      </div>
     </div>
   </div>
 </template>

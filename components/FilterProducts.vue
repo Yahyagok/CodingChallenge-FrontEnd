@@ -3,7 +3,7 @@
     placeholder="Search Products..."
     class="w-2/4 h-8 px-4 inline-block text-lg text-gray-700"
     type="search"
-    @v-model="filterProduct"
+    @keyup="search($event.target.value)"
   />
 </template>
 
@@ -11,8 +11,8 @@
 export default {
   name: 'FilterProducts',
   methods: {
-    filterProduct() {
-      this.$emit('filterProduct')
+    search(text) {
+      this.$emit('set-filters', text)
     },
   },
 }

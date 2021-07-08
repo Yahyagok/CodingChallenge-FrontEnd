@@ -2,7 +2,7 @@
   <div>
     <div>
       <h5 class="text-center text-red-500 md:text-lg">Products</h5>
-      <FilterProducts @filterProduct="filterProduct" />
+      <FilterProducts @set-filters="load($event)" />
       <div class="absolute md:grid grid-cols-4 left-12 top-12 m-6 p-6">
         <Pages
           @handleClick="handleClick"
@@ -37,6 +37,7 @@ export default {
   data() {
     return {
       products: [],
+      text: '',
     }
   },
 
@@ -68,7 +69,6 @@ export default {
           `https://trayvonnorthern.com/Edgewood-API/public/api/products?page=1`,
           config
         )
-        console.log(res.data)
         this.products = res.data.data
       } catch (err) {
         console.log(err)
@@ -85,7 +85,6 @@ export default {
           `https://trayvonnorthern.com/Edgewood-API/public/api/products?page=2`,
           config
         )
-        console.log(res.data)
         this.products = res.data.data
       } catch (err) {
         console.log(err)
@@ -102,16 +101,15 @@ export default {
           `https://trayvonnorthern.com/Edgewood-API/public/api/products?page=3`,
           config
         )
-        console.log(res.data)
         this.products = res.data.data
       } catch (err) {
         console.log(err)
       }
     },
-    filterProduct() {
-      console.log(this.products)
-      this.products.filter((product) => {
-        return product.name.match(this.search)
+    load(text) {
+      const filtered = this.products.filter((product) => {
+        product.name.includes(text)
+        return (this.products = filtered)
       })
     },
   },
